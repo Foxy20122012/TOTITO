@@ -8,7 +8,7 @@ import Tablero from '../components/Tablejo'
     <div className='mx-auto container flex justify-center'>
       <Tablero className="m-5 p-2"/>
     </div>
-       
+      
    
     </div>
       
