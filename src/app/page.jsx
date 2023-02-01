@@ -17,3 +17,6 @@ import Tablero from '../components/Tablejo'
 
 
 export default Home
+
+
+

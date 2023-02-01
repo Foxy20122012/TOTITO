@@ -18,8 +18,29 @@ const Tablero =()=>{
         }
     }
 
+    const calculaGanador =(mytablero)=>{
+        const jugadasGanadoras =[
+            [0,1,2],
+            [3,4,5],
+            [6,7,8],
+            [0,3,6],
+            [1,4,7],
+            [2,5,7],
+            [0,4,8],
+            [2,4,6],
+        ];
+        for (let indicejugada = 0; indicejugada < jugadasGanadoras.length; indicejugada++){
+            const[a, b, c]= jugadasGanadoras[indicejugada];
+        if (mytablero[a] && mytablero[a] === mytablero[b] && mytablero[a] === mytablero[c]){
+            return mytablero[a];
+        }
+        }
+        return '';
+    }
+
     return (
-        
+        <div className="">
+            <span>{'El ganador es: '+ calculaGanador(cuadros)}</span>
             <div className='grid grid-cols-3 gap-1'>
                             
               {
@@ -34,7 +55,7 @@ const Tablero =()=>{
                 })
               }
 
-            
+            </div>
         </div>
     )
 }
