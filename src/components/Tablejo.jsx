@@ -1,11 +1,15 @@
 'use client';
+import { useContext } from "react";
 import {useState} from "react"
 import Cuadro from "./cuadro"
+
 
 
 const Tablero =()=>{
     const[cuadros, setCuadros] = useState(Array(9).fill(' '))
     const [turno, setTurno] = useState('X')
+
+
 
     const pintaFigura = (indexItem) =>{
         const misCuadritos =cuadros.slice()
